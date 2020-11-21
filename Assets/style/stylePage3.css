@@ -1,0 +1,46 @@
+body{
+    background: #fcf4f5;
+}
+
+.line {
+    position: relative;
+    width: 6.7em;
+    font-size: 230%;
+    margin: 50px 50px;
+    top:50%;
+    color: #ff8f9f;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Anonymous Pro', monospace;
+    border-right: 2px solid #ff8f9f;
+    
+
+}
+
+
+/*Animation of text*/
+.anim-typewriter{
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 6.7em;
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: #ff8f9f;
+    }
+
+    to{
+        border-right-color: transparent;
+    }
+}

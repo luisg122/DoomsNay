@@ -1,0 +1,61 @@
+body{
+    background: #1d2838;
+    font-family: 'Roboto Condensed', 'sans-serif';
+}
+
+.line {
+    position: relative;
+    width: 9.5em;
+    font-size: 230%;
+    margin: 50px 50px;
+    top:50%;
+    color: white;
+    text-align: start;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Anonymous Pro', monospace;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    
+
+}
+
+
+/*Animation of text*/
+.anim-typewriter{
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+
+    to{
+        width: 9.5em;
+    }
+}
+
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to{
+        border-right-color: transparent;
+    }
+}
+
+
+#mapid {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    border-radius: 35px;
+    display: inline-block;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
