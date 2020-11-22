@@ -10,9 +10,12 @@
             integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
             crossorigin=""/>
 
-        
-        <script src ="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
         <script src="https://d3js.org/d3.v5.js"></script>
 
          <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -20,39 +23,38 @@
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
             crossorigin=""></script>
 
-        <script src="map_script.js"></script>
-
+        <!--<script src="searchButtonListener.js"></script>-->
     </head>
 
     <body>
         <p class="line anim-typewriter">#VisualizingCovid</p>
 
+        
+        <div class="searchBox">
+            <input id="searchInput"type="text" name="" placeholder="Search a U.S. County, e.g. new york">
+            <button class="searchButton" href="#">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+
+
         <div id="mapid"></div>
-        <script>
-            // initialize the map
-            var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-            // load a tile layer
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                maxZoom: 18,
-                id: 'mapbox/streets-v11',
-                tileSize: 512,
-                zoomOffset: -1,
-                accessToken: 'pk.eyJ1IjoibHVpc2cxMjIiLCJhIjoiY2tocXo2MHdsMGN1NjJ3cGRpNjFtZGV5YSJ9.LA1GqN3vUVJwZqCBL3zR3w'
-            }).addTo(mymap);   
+        <script src="visualTweetMap.js"></script>
+            
+        <table class="actual_covid_stats">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>County</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
 
-            var circle = L.circle([51.508, -0.11], {
-                color: 'red',
-                fillColor: '#f03',
-                fillOpacity: 0.5,
-                radius: 500
-            }).addTo(mymap);
-
-            var polygon = L.polygon([
-                [51.509, -0.08],
-                [51.503, -0.06],
-                [51.51, -0.047]
-            ]).addTo(mymap);
-        </script>
+            <tbody id="myTable">
+            </tbody>
+            <script src="visualCovidTable.js"></script>
+        </table>
     </body>
 </html>

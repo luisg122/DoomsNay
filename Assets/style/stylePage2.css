@@ -50,7 +50,7 @@ body{
 #mapid {
     position: relative;
     width: 80%;
-    margin: 0 auto;
+    margin: 100px auto 0px auto;
     height: 500px;
     border-radius: 35px;
     display: inline-block;
@@ -58,4 +58,107 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.actual_covid_stats{    
+    border-collapse: collapse;
+    min-width: 80%;
+    height: 100%;
+    margin: 25px auto;
+    font-size: 1.3em;
+    color: white;
+   
+    border-radius: 25px;
+    border-style: none;
+    overflow: hidden;
+
+    box-shadow: 
+    -5px -5px 10px rgba(80, 80, 80, 0.5), 
+    5px 5px 10px rgba(70, 70, 70, 0.12),
+    inset -5px -5px 10px rgba(80, 80, 80, 0.5),
+    inset 5px 5px 10px rgba(70, 70, 70, 0.12);
+    border: none;
+}
+
+.actual_covid_stats thead tr{
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 15px;
+}
+
+.actual_covid_stats tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.actual_covid_stats tbody tr:last-of-type{
+    border-radius: 25px;
+    border-style: none;
+}
+
+.actual_covid_stats tbody tr.active-row{
+    font-weight: bold;
+    color: #545f70;
+}
+
+.actual_covid_stats td{
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* styling the Search box */
+.searchBox {
+    position: absolute;
+    top:20%;
+    right: 15%;
+    margin-bottom: 50px auto;;
+    transform:  translate(15%,-70%);
+    background: rgb(255, 255, 255);
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.searchBox:hover > #searchInput {
+    width: 400px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : rgb(138, 125, 125);
+}
+
+.searchButton {
+    color: rgb(138, 125, 125);
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+#searchInput {
+    font-family: 'Anonymous Pro', monospace;
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+@media screen and (max-width: 800px) {
+    .searchBox:hover > #searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
 }
