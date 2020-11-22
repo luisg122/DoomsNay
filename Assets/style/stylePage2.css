@@ -127,11 +127,11 @@ body{
 
 .searchBox:hover > .searchButton {
   background: white;
-  color : rgb(138, 125, 125);
+  color : black;
 }
 
 .searchButton {
-    color: rgb(138, 125, 125);
+    color: black;
     float: right;
     width: 40px;
     height: 40px;
@@ -161,4 +161,81 @@ body{
         width: 150px;
         padding: 0 6px;
     }
+}
+
+/*
+        <div class="tweetStream">
+            <div id="tweetName"><p id="t_name"></p></div>
+            <div id="tweetDate"><p id="t_date"></p></div>
+            <div id="tweetText"><p id="t_text"></p></div>
+        </div>
+*/
+
+#tweetStream{
+    background: black;
+    width: 80%;
+    height: 500px;
+    margin: 50px auto 50px auto;
+
+    color: white;   
+    border-radius: 25px;
+    border-style: none;
+    overflow-y:auto;
+    padding: 0 15px;
+
+    box-shadow: 
+    -5px -5px 10px rgba(80, 80, 80, 0.5), 
+    5px 5px 10px rgba(70, 70, 70, 0.12),
+    inset -5px -5px 10px rgba(80, 80, 80, 0.5),
+    inset 5px 5px 10px rgba(70, 70, 70, 0.12);
+    border: none;
+}
+
+#tweetStream .live_tweets{
+    width: 85%;
+    height: auto;
+    margin: 50px auto;
+    overflow: hidden;  
+    border-bottom: 1px solid #dddddd;
+}
+
+#tweetStream .live_tweets #tweetName{
+    position: relative;
+    float: left;
+    margin: 0px 100px 0px auto;
+    top:1%;
+}
+
+#tweetStream .live_tweets #tweetDate{
+    position: relative;
+    float: right;
+    margin: 0px auto 0px 100px;
+    top:1%;
+}
+
+#tweetText{
+    position: relative;
+    margin-top: 10px;
+    padding:10px;
+}
+
+#tweetStream::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+#tweetStream::-webkit-scrollbar
+{
+    width: 8px;
+    border-radius: 25px;
+    background-color: #F5F5F5;
+}
+
+#tweetStream::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #00acee;
 }

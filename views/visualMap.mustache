@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Map</title>
+        <link rel="stylesheet" type="text/css" href="style/stylePage2.css">
+
+       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+        <script src="https://d3js.org/d3.v5.js"></script>
+
+         <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+
+        <!--<script src="searchButtonListener.js"></script>-->
+    </head>
+
+    <body>
+        <p class="line anim-typewriter">#VisualizingCovid</p>
+
+        
+
+        <div class="searchBox">
+            <input id="searchInput"type="text" name="" placeholder="Search a U.S. County, e.g. new york">
+            <button class="searchButton" href="#">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <div id="mapid"></div>
+        <script src="js/visualTweetMap.js"></script>
+            
+        <table class="actual_covid_stats">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>County</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
+
+            <tbody id="myTable">
+            </tbody>
+            <script src="js/visualCovidTable.js"></script>
+        </table>
+
+        <div id="tweetStream">
+            <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+
+            <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+
+            <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+
+             <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+
+            <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+
+            <div class="live_tweets">
+                <div id="tweetName"><p id="t_name">Anonymous</p></div>
+                <div id="tweetDate"><p id="t_date">November 10</p></div>
+                <br><br>
+                <div id="tweetText"><p id="t_text">I am a humanoid competing in a hackathon. yay!</p></div>
+            </div>
+        </div>
+    </body>
+</html>
